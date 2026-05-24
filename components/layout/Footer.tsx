@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
 
 const footerLinks = {
   Company: [
@@ -36,22 +36,15 @@ export default function Footer() {
             </p>
             <div className="flex flex-col gap-3">
               <a
-                href="mailto:hello@autobnbs.co.nz"
+                href="mailto:contact@autobnbs.com"
                 className="flex items-center gap-2.5 text-stone-300 hover:text-white transition-colors text-sm"
               >
                 <Mail size={15} className="text-stone-400 shrink-0" />
-                hello@autobnbs.co.nz
-              </a>
-              <a
-                href="tel:+15550000000"
-                className="flex items-center gap-2.5 text-stone-300 hover:text-white transition-colors text-sm"
-              >
-                <Phone size={15} className="text-stone-400 shrink-0" />
-                +1 (555) 000 0000
+                contact@autobnbs.com
               </a>
               <span className="flex items-center gap-2.5 text-stone-300 text-sm">
                 <MapPin size={15} className="text-stone-400 shrink-0" />
-                Worldwide
+                Christchurch, New Zealand
               </span>
             </div>
           </div>

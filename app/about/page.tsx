@@ -6,7 +6,7 @@ import AnimatedSection from "@/components/ui/AnimatedSection";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Learn about AutoBNBs — a global short-term rental management service founded by a young entrepreneur passionate about property and technology.",
+    "Learn about AutoBNBs — a global short-term rental management service co-founded by Nathan Sparrow and Wiari Faulkner, two young entrepreneurs who turned a shared passion into a business built for property owners.",
 };
 
 const values = [
@@ -47,13 +47,13 @@ export default function AboutPage() {
               Our Story
             </span>
             <h1 className="font-display font-extrabold text-5xl sm:text-6xl lg:text-7xl text-gray-900 mb-6 tracking-tight">
-              Built for Owners,
+              Two Founders.
               <br />
-              <span className="text-gray-700">Built to Perform.</span>
+              <span className="text-gray-700">One Mission.</span>
             </h1>
             <p className="text-gray-600 text-lg sm:text-xl max-w-2xl mx-auto leading-relaxed">
-              AutoBNBs was founded with a simple idea: property owners deserve access to
-              professional-grade short-term rental management without the corporate price tag.
+              AutoBNBs was built by two people who saw a better way for property owners to earn —
+              and decided to make it happen.
             </p>
           </AnimatedSection>
         </div>
@@ -63,55 +63,62 @@ export default function AboutPage() {
         {/* Founder story */}
         <AnimatedSection>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center mb-24">
-            {/* Portrait placeholder */}
-            <div className="relative">
-              <div className="aspect-[4/5] rounded-2xl bg-card-gradient border border-gold-500/15 overflow-hidden flex items-center justify-center">
-                <div className="text-center p-12">
-                  <div className="w-24 h-24 rounded-full bg-gold-gradient mx-auto mb-6 flex items-center justify-center shadow-xl shadow-gold-500/30">
-                    <span className="font-display font-black text-gray-900 text-3xl">J</span>
+
+            {/* Co-founder cards */}
+            <div className="flex flex-col sm:flex-row lg:flex-col gap-5">
+              {[
+                { initial: "N", name: "Nathan Sparrow", role: "Co-Founder & Director" },
+                { initial: "W", name: "Wiari Faulkner", role: "Co-Founder & Director" },
+              ].map((founder) => (
+                <div
+                  key={founder.name}
+                  className="flex-1 glass-card rounded-2xl p-8 flex items-center gap-5 border border-gold-500/15"
+                >
+                  <div className="w-16 h-16 rounded-full bg-gold-gradient flex items-center justify-center shrink-0 shadow-lg shadow-gold-500/20">
+                    <span className="font-display font-black text-gray-900 text-2xl">
+                      {founder.initial}
+                    </span>
                   </div>
-                  <div className="text-gray-900 font-display font-bold text-xl mb-1">
-                    James Wilson
+                  <div>
+                    <div className="font-display font-bold text-gray-900 text-lg leading-snug">
+                      {founder.name}
+                    </div>
+                    <div className="text-gray-500 text-sm mt-0.5">{founder.role}</div>
                   </div>
-                  <div className="text-gray-600 text-sm font-medium">Founder & Director</div>
-                  <div className="text-gray-400 text-xs mt-1">Founder & Director</div>
                 </div>
-              </div>
-              {/* Floating stat */}
-              <div className="absolute -bottom-6 -right-6 glass-card rounded-xl px-6 py-4 border border-gold-500/20 shadow-xl">
-                <div className="font-display font-extrabold text-3xl text-gray-900">87%</div>
-                <div className="text-gray-500 text-xs mt-0.5">Avg. occupancy across portfolio</div>
-              </div>
+              ))}
             </div>
 
             {/* Story content */}
             <div>
               <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-gray-900 mb-6 tracking-tight leading-snug">
-                The Problem I Saw — and Decided to Solve
+                A Shared Vision, Built From Scratch
               </h2>
               <div className="flex flex-col gap-5 text-gray-500 text-base leading-relaxed">
                 <p>
-                  I grew up watching my parents manage a rental property the hard way — late
-                  calls from tenants, months of vacancy, the constant stress of whether it was
-                  actually worth it. When short-term rentals took off, I saw a better path.
-                  But I also saw property owners struggling to make it work on their own.
+                  Nathan and Wiari met in college and hit it off immediately — not just as
+                  friends, but as two people who thought about business and opportunity the
+                  same way. They were constantly talking about ideas, spotting gaps in markets,
+                  and asking the same question: <em>why isn&apos;t someone doing this better?</em>
                 </p>
                 <p>
-                  After spending time studying the Airbnb algorithm, building connections with
-                  reliable cleaning and maintenance teams, and learning everything I could about
-                  dynamic pricing and guest experience, I realised I had built something most
-                  property owners didn&apos;t have: a complete system.
+                  Short-term rentals kept coming up. They could both see that property owners
+                  were sitting on real earning potential — but most had no idea how to unlock it,
+                  and the existing options were either too expensive, too hands-off, or just
+                  not built with the owner in mind.
                 </p>
                 <p>
-                  I started managing properties for family friends. The results spoke for
-                  themselves — properties that had sat empty were suddenly booked weeks in
-                  advance. Owners were earning 30–50% more than their long-term rental rate.
-                  And nobody was stressed.
+                  After leaving school, they decided to stop talking and start building. They
+                  threw themselves into learning everything — Airbnb algorithms, dynamic pricing,
+                  guest communication, cleaning coordination — and built AutoBNBs from the
+                  ground up together.
                 </p>
                 <p>
-                  AutoBNBs grew from there. Today we manage a growing portfolio of properties
-                  worldwide, and every single decision we make still comes back to one question:
-                  is this the best outcome for the property owner?
+                  The results were immediate. Properties that owners had struggled to manage
+                  themselves were suddenly running smoothly, earning more, and getting five-star
+                  reviews. Word spread fast. AutoBNBs grew from there — and it&apos;s still
+                  driven by the same two people who started it, with the same commitment to
+                  one thing: doing right by the property owner.
                 </p>
               </div>
             </div>

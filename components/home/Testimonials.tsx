@@ -22,12 +22,12 @@ const testimonials = [
   },
   {
     name: "Rachel K.",
-    location: "United States",
-    role: "Holiday home owner",
+    location: "Christchurch, NZ",
+    role: "Investment property owner",
     quote:
-      "I live overseas and was worried about managing a property remotely. AutoBNBs gave me complete peace of mind. The monthly reports are detailed and transparent, and the team responds to everything. My property is consistently earning, and I never have to stress about it.",
+      "Our Christchurch property had been sitting underutilised for years — we were only using it occasionally and the long-term rental income barely covered costs. AutoBNBs completely turned that around. They set up the listing, handled every guest, and kept it consistently booked. We're now earning nearly double what we were before, and we haven't had to lift a finger.",
     rating: 5,
-    highlight: "Fully managed from overseas",
+    highlight: "Nearly double our previous rental income",
   },
 ];
 

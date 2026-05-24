@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Mail, Phone, MapPin, Clock } from "lucide-react";
+import { Mail, MapPin, Clock } from "lucide-react";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import ContactForm from "@/components/contact/ContactForm";
 
@@ -13,19 +13,13 @@ const contactDetails = [
   {
     icon: Mail,
     label: "Email",
-    value: "hello@autobnbs.co.nz",
-    href: "mailto:hello@autobnbs.co.nz",
-  },
-  {
-    icon: Phone,
-    label: "Phone",
-    value: "+1 (555) 000 0000",
-    href: "tel:+15550000000",
+    value: "contact@autobnbs.com",
+    href: "mailto:contact@autobnbs.com",
   },
   {
     icon: MapPin,
     label: "Based in",
-    value: "Available Worldwide",
+    value: "Christchurch, New Zealand",
     href: null,
   },
   {
