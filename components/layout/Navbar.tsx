@@ -117,7 +117,7 @@ export default function Navbar() {
             href="/contact"
             className="mt-3 flex items-center justify-center bg-gray-900 text-white font-display font-semibold text-sm px-5 py-3 rounded-full"
           >
-            Get a Free Audit
+            See What Your Property Can Earn
           </Link>
         </div>
       </div>
