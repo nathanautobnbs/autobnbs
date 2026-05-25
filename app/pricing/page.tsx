@@ -2,9 +2,12 @@ import type { Metadata } from "next";
 import PricingCards from "@/components/pricing/PricingCards";
 
 export const metadata: Metadata = {
-  title: "Pricing — AutoBNBs",
+  title: "Airbnb Management Pricing & Plans",
   description:
-    "Simple, transparent pricing. No upfront costs, no retainers — AutoBNBs only earns when you earn.",
+    "Simple Airbnb management pricing — Basic 15% or Pro 20% of earnings. No upfront fees, no contracts. You pay only when we earn you bookings.",
+  alternates: {
+    canonical: 'https://autobnbs.com/pricing',
+  },
 };
 
 export default function PricingPage() {

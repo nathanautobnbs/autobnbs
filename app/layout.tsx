@@ -18,37 +18,50 @@ const plusJakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://autobnbs.com'),
   title: {
-    default: "AutoBNBs — Short-Term Rental Management",
+    default: "AutoBNBs — Airbnb Property Management",
     template: "%s | AutoBNBs",
   },
   description:
-    "AutoBNBs manages your Airbnb and short-term rental property — from listing creation and dynamic pricing to guest communication and cleaning coordination. Earn more, stress less.",
+    "AutoBNBs manages your short-term rental property end-to-end. Listing, dynamic pricing, guest communication & cleaning — all handled. Earn passive income from your Airbnb.",
   keywords: [
-    "Airbnb management",
+    "Airbnb management service",
     "short-term rental management",
-    "property management",
-    "Airbnb co-host",
-    "passive income property",
+    "Airbnb property management",
+    "vacation rental management",
+    "Airbnb automation",
+    "passive income Airbnb",
+    "property management for Airbnb hosts",
   ],
   openGraph: {
     type: "website",
     locale: "en",
     siteName: "AutoBNBs",
-    title: "AutoBNBs — Short-Term Rental Management",
+    title: "AutoBNBs — Airbnb Property Management",
     description:
-      "We handle everything so you can earn passive income from your property without the hassle.",
+      "AutoBNBs manages your short-term rental property end-to-end. Listing, dynamic pricing, guest communication & cleaning — all handled. Earn passive income from your Airbnb.",
+    images: [
+      {
+        url: '/logoman.png',
+        width: 800,
+        height: 400,
+        alt: 'AutoBNBs — Airbnb Property Management',
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "AutoBNBs — Short-Term Rental Management",
+    title: "AutoBNBs — Airbnb Property Management",
     description:
-      "We handle everything so you can earn passive income from your property without the hassle.",
+      "AutoBNBs manages your short-term rental property end-to-end. Listing, dynamic pricing, guest communication & cleaning — all handled. Earn passive income from your Airbnb.",
+    images: ['/logoman.png'],
   },
   robots: {
     index: true,
     follow: true,
   },
+  themeColor: '#FFDEF0',
 };
 
 export default function RootLayout({
@@ -61,6 +74,28 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${plusJakarta.variable} font-sans bg-navy-900 text-gray-800 antialiased`}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              "name": "AutoBNBs",
+              "description": "Professional Airbnb and short-term rental property management service",
+              "url": "https://autobnbs.com",
+              "email": "contact@autobnbs.com",
+              "telephone": "+64223682143",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Christchurch",
+                "addressCountry": "NZ",
+              },
+              "serviceType": "Short-Term Rental Property Management",
+              "areaServed": "Worldwide",
+              "priceRange": "15%-20% of booking revenue",
+            }),
+          }}
+        />
         <Navbar />
         <main>{children}</main>
         <Footer />

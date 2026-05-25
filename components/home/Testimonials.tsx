@@ -3,29 +3,29 @@ import AnimatedSection from "@/components/ui/AnimatedSection";
 
 const testimonials = [
   {
-    name: "Sarah M.",
-    location: "Australia",
+    name: "Aroha T.",
+    location: "Queenstown, NZ",
     role: "Investment property owner",
     quote:
-      "I was nervous about putting my rental on Airbnb — I had no idea where to start. AutoBNBs handled absolutely everything. Within the first month, I was earning 40% more than my long-term tenant was paying, and I didn't have to lift a finger. Best decision I've made with this property.",
+      "Honestly had no clue where to even start with Airbnb so I just handed it all over to AutoBNBs and they sorted everything. First month I made way more than I ever did with a long term tenant and I literally did nothing. Still can't believe how easy it was. Would 100% recommend.",
     rating: 5,
     highlight: "40% more than long-term rent",
   },
   {
-    name: "James T.",
-    location: "United Kingdom",
-    role: "Owner of two properties",
+    name: "Kartik R.",
+    location: "Nadi, Fiji",
+    role: "Holiday property owner",
     quote:
-      "I tried managing my own Airbnb for three months and it nearly broke me. Late-night messages, guest issues, no-shows — it was relentless. Handing it to AutoBNBs was an instant weight off my shoulders. Occupancy went from 62% to 89% in 60 days, and I've barely thought about it since.",
+      "At first I was not sure how a company overseas could manage my property here in Nadi. I did not fully understand how it works. But I decided to try and honestly it has been really good. They handle everything from far away — the listing, the guests, all of it. Every month I get my income and I don't have to stress. No regrets, I am very happy I gave it a chance.",
     rating: 5,
-    highlight: "62% → 89% occupancy in 60 days",
+    highlight: "Opened up an opportunity I didn't know existed",
   },
   {
     name: "Rachel K.",
     location: "Christchurch, NZ",
     role: "Investment property owner",
     quote:
-      "Our Christchurch property had been sitting underutilised for years — we were only using it occasionally and the long-term rental income barely covered costs. AutoBNBs completely turned that around. They set up the listing, handled every guest, and kept it consistently booked. We're now earning nearly double what we were before, and we haven't had to lift a finger.",
+      "We had this property sitting there doing basically nothing for ages. A friend mentioned AutoBNBs so we thought why not give it a go. Genuinely shocked at how well it's worked out. They took care of everything and we're now earning nearly double what we were getting from our last tenant. Wish we'd done it sooner honestly.",
     rating: 5,
     highlight: "Nearly double our previous rental income",
   },

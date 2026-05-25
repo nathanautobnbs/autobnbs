@@ -4,9 +4,12 @@ import { ArrowRight, Target, Heart, Zap, Globe } from "lucide-react";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 
 export const metadata: Metadata = {
-  title: "About",
+  title: "About AutoBNBs — Our Story & Team",
   description:
-    "Learn about AutoBNBs — a global short-term rental management service co-founded by Nathan Sparrow and Wiari Faulkner, two young entrepreneurs who turned a shared passion into a business built for property owners.",
+    "AutoBNBs was co-founded by Nathan Sparrow & Wiari Faulkner. Built to deliver professional Airbnb management with measurable results for property owners.",
+  alternates: {
+    canonical: 'https://autobnbs.com/about',
+  },
 };
 
 const values = [
@@ -47,13 +50,13 @@ export default function AboutPage() {
               Our Story
             </span>
             <h1 className="font-display font-extrabold text-5xl sm:text-6xl lg:text-7xl text-gray-900 mb-6 tracking-tight">
-              Two Founders.
+              Built with Purpose.
               <br />
-              <span className="text-gray-700">One Mission.</span>
+              <span className="text-gray-700">Driven by Results.</span>
             </h1>
             <p className="text-gray-600 text-lg sm:text-xl max-w-2xl mx-auto leading-relaxed">
-              AutoBNBs was built by two people who saw a better way for property owners to earn —
-              and decided to make it happen.
+              AutoBNBs was founded on a clear vision: to bring professional-grade short-term
+              rental management to property owners who deserve better than the status quo.
             </p>
           </AnimatedSection>
         </div>
@@ -92,33 +95,34 @@ export default function AboutPage() {
             {/* Story content */}
             <div>
               <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-gray-900 mb-6 tracking-tight leading-snug">
-                A Shared Vision, Built From Scratch
+                A Deliberate Vision for a Broken Industry
               </h2>
               <div className="flex flex-col gap-5 text-gray-500 text-base leading-relaxed">
                 <p>
-                  Nathan and Wiari met in college and hit it off immediately — not just as
-                  friends, but as two people who thought about business and opportunity the
-                  same way. They were constantly talking about ideas, spotting gaps in markets,
-                  and asking the same question: <em>why isn&apos;t someone doing this better?</em>
+                  Nathan Sparrow and Wiari Faulkner founded AutoBNBs after identifying a
+                  consistent gap in the short-term rental market: property owners were
+                  leaving significant revenue on the table, not through lack of effort, but
+                  because the tools, systems, and expertise required to truly optimise a
+                  rental weren&apos;t accessible to them.
                 </p>
                 <p>
-                  Short-term rentals kept coming up. They could both see that property owners
-                  were sitting on real earning potential — but most had no idea how to unlock it,
-                  and the existing options were either too expensive, too hands-off, or just
-                  not built with the owner in mind.
+                  With combined expertise across property management, revenue optimisation,
+                  guest experience, and hospitality technology, Nathan and Wiari built
+                  AutoBNBs from the ground up with one clear objective — to deliver
+                  measurable, consistent results for every property owner they work with.
                 </p>
                 <p>
-                  After leaving school, they decided to stop talking and start building. They
-                  threw themselves into learning everything — Airbnb algorithms, dynamic pricing,
-                  guest communication, cleaning coordination — and built AutoBNBs from the
-                  ground up together.
+                  AutoBNBs was designed around automation and data from day one. Every
+                  process — from dynamic pricing and listing optimisation to guest
+                  communication and housekeeping coordination — was engineered to perform
+                  at a level that self-managing owners simply can&apos;t replicate on their own.
                 </p>
                 <p>
-                  The results were immediate. Properties that owners had struggled to manage
-                  themselves were suddenly running smoothly, earning more, and getting five-star
-                  reviews. Word spread fast. AutoBNBs grew from there — and it&apos;s still
-                  driven by the same two people who started it, with the same commitment to
-                  one thing: doing right by the property owner.
+                  The results speak for themselves. Properties under AutoBNBs management
+                  consistently outperform market averages, and the owners behind them
+                  finally have what they were looking for: passive income that actually
+                  works. Nathan and Wiari remain hands-on in the business, and that
+                  commitment to quality and accountability has never changed.
                 </p>
               </div>
             </div>

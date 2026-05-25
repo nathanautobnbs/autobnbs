@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Mail, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
 
 const footerLinks = {
   Company: [
@@ -9,7 +9,7 @@ const footerLinks = {
     { label: "About", href: "/about" },
   ],
   "Get Started": [
-    { label: "Free Property Audit", href: "/contact" },
+    { label: "See What Your Property Can Earn", href: "/contact" },
     { label: "Contact Us", href: "/contact" },
   ],
 };
@@ -41,6 +41,13 @@ export default function Footer() {
               >
                 <Mail size={15} className="text-stone-400 shrink-0" />
                 contact@autobnbs.com
+              </a>
+              <a
+                href="tel:+64223682143"
+                className="flex items-center gap-2.5 text-stone-300 hover:text-white transition-colors text-sm"
+              >
+                <Phone size={15} className="text-stone-400 shrink-0" />
+                022 368 2143
               </a>
               <span className="flex items-center gap-2.5 text-stone-300 text-sm">
                 <MapPin size={15} className="text-stone-400 shrink-0" />

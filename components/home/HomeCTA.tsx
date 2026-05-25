@@ -45,7 +45,7 @@ export default function HomeCTA() {
               href="/contact"
               className="inline-flex items-center justify-center gap-2 bg-gray-900 text-white font-display font-bold text-base px-10 py-4 rounded-full shadow-xl shadow-gray-900/20 hover:bg-gray-800 hover:scale-105 transition-all duration-200"
             >
-              Get My Free Audit
+              See What Your Property Can Earn
               <ArrowRight size={18} />
             </Link>
             <Link

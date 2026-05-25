@@ -88,21 +88,26 @@ export default function Hero() {
               href="/contact"
               className="inline-flex items-center gap-3 bg-gray-900 text-white font-display font-bold text-base px-9 py-4 rounded-full shadow-xl shadow-gray-900/30 hover:bg-gray-800 hover:scale-105 transition-all duration-200"
             >
-              Get a Free Property Audit
+              See What Your Property Can Earn
               <ArrowRight size={18} />
             </Link>
 
             {/* Stats */}
             <div className="flex flex-wrap gap-10 mt-14 pt-10 border-t border-white/30">
               {[
-                { value: "87%", label: "Avg. Occupancy Rate" },
-                { value: "8+", label: "Properties Managed" },
-                { value: "4.9★", label: "Guest Rating" },
-                { value: "$3,800", label: "Avg. Monthly Revenue" },
+                { value: "4.9★", label: "Average Guest Rating", highlight: false },
+                { value: "24/7", label: "Guest Support", highlight: false },
+                { value: "40%", label: "More Revenue vs Self-Managing", highlight: false },
+                { value: "$0", label: "Upfront Fees", highlight: true },
               ].map((stat) => (
-                <div key={stat.label}>
-                  <div className="font-display font-extrabold text-3xl text-white"
-                       style={{ textShadow: "0 1px 4px rgba(0,0,0,0.25)" }}>
+                <div
+                  key={stat.label}
+                  className={stat.highlight ? "px-4 py-2 rounded-xl border border-white/40 bg-white/15 backdrop-blur-sm" : ""}
+                >
+                  <div
+                    className="font-display font-extrabold text-3xl text-white"
+                    style={{ textShadow: "0 1px 4px rgba(0,0,0,0.25)" }}
+                  >
                     {stat.value}
                   </div>
                   <div className="text-white/80 text-sm mt-1">{stat.label}</div>

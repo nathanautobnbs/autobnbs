@@ -11,6 +11,7 @@ const navLinks = [
   { href: "/services", label: "Services" },
   { href: "/how-it-works", label: "How It Works" },
   { href: "/pricing", label: "Pricing" },
+  { href: "/faq", label: "FAQ" },
   { href: "/about", label: "About" },
 ];
 
@@ -77,7 +78,7 @@ export default function Navbar() {
               href="/contact"
               className="inline-flex items-center gap-2 bg-gray-900 text-white font-display font-semibold text-sm px-5 py-2.5 rounded-full shadow-md hover:bg-gray-800 hover:scale-105 transition-all duration-200"
             >
-              Get a Free Audit
+              See What Your Property Can Earn
             </Link>
           </div>
 

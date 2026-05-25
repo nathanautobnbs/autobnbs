@@ -1,12 +1,15 @@
 import type { Metadata } from "next";
-import { Mail, MapPin, Clock } from "lucide-react";
+import { Mail, Phone, MapPin, Clock } from "lucide-react";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import ContactForm from "@/components/contact/ContactForm";
 
 export const metadata: Metadata = {
   title: "Get a Free Property Audit",
   description:
-    "Contact AutoBNBs for a free, no-obligation short-term rental property audit. We'll assess your property's earning potential and show you exactly what we'd do to maximise it.",
+    "Book a free Airbnb property audit with AutoBNBs. We'll assess your rental potential and show exactly how we'd manage and grow your returns.",
+  alternates: {
+    canonical: 'https://autobnbs.com/contact',
+  },
 };
 
 const contactDetails = [
@@ -15,6 +18,12 @@ const contactDetails = [
     label: "Email",
     value: "contact@autobnbs.com",
     href: "mailto:contact@autobnbs.com",
+  },
+  {
+    icon: Phone,
+    label: "Phone",
+    value: "022 368 2143",
+    href: "tel:+64223682143",
   },
   {
     icon: MapPin,

@@ -17,9 +17,12 @@ import {
 import AnimatedSection from "@/components/ui/AnimatedSection";
 
 export const metadata: Metadata = {
-  title: "How It Works",
+  title: "How Airbnb Property Management Works",
   description:
-    "AutoBNBs makes short-term rental management simple. Onboard your property, we handle everything, and you earn passive income. Learn the full process.",
+    "See how AutoBNBs manages your Airbnb property. Onboard in days, we handle everything, you earn passive income monthly. No upfront fees.",
+  alternates: {
+    canonical: 'https://autobnbs.com/how-it-works',
+  },
 };
 
 const phases = [
@@ -247,12 +250,29 @@ export default function HowItWorksPage() {
               href="/contact"
               className="inline-flex items-center gap-2 bg-gold-gradient text-gray-900 font-display font-bold text-base px-10 py-4 rounded-full shadow-xl shadow-gold-500/25 hover:shadow-gold-500/40 hover:scale-105 transition-all duration-200"
             >
-              Book a Free Audit
+              See What Your Property Can Earn
               <ArrowRight size={18} />
             </Link>
           </div>
         </AnimatedSection>
       </div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": faqs.map((faq) => ({
+              "@type": "Question",
+              "name": faq.q,
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": faq.a,
+              },
+            })),
+          }),
+        }}
+      />
     </div>
   );
 }

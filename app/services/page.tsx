@@ -13,9 +13,12 @@ import {
 import AnimatedSection from "@/components/ui/AnimatedSection";
 
 export const metadata: Metadata = {
-  title: "Services",
+  title: "Airbnb Management Services",
   description:
-    "AutoBNBs offers end-to-end short-term rental management — listing optimisation, dynamic pricing, guest communication, housekeeping coordination, and owner reporting.",
+    "Explore AutoBNBs' full short-term rental management services — listing optimisation, dynamic pricing, guest communication, and housekeeping. All done for you.",
+  alternates: {
+    canonical: 'https://autobnbs.com/services',
+  },
 };
 
 const services = [
@@ -99,6 +102,34 @@ const services = [
 export default function ServicesPage() {
   return (
     <div className="bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "serviceType": "Airbnb Property Management",
+            "name": "AutoBNBs Short-Term Rental Management",
+            "provider": {
+              "@type": "Organization",
+              "name": "AutoBNBs",
+              "url": "https://autobnbs.com",
+            },
+            "description":
+              "End-to-end Airbnb and short-term rental management including listing optimisation, dynamic pricing, guest communication, housekeeping coordination, and owner reporting.",
+            "areaServed": "Worldwide",
+            "offers": {
+              "@type": "Offer",
+              "priceSpecification": {
+                "@type": "UnitPriceSpecification",
+                "price": "15-20",
+                "priceCurrency": "USD",
+                "unitText": "% of booking revenue",
+              },
+            },
+          }),
+        }}
+      />
       {/* Page header */}
       <div className="relative pt-32 pb-20 overflow-hidden bg-gold-600">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -203,7 +234,7 @@ export default function ServicesPage() {
               href="/contact"
               className="inline-flex items-center gap-2 bg-gold-gradient text-gray-900 font-display font-bold text-base px-10 py-4 rounded-full shadow-xl shadow-gold-500/25 hover:shadow-gold-500/40 hover:scale-105 transition-all duration-200"
             >
-              Get a Free Property Audit
+              See What Your Property Can Earn
               <ArrowRight size={18} />
             </Link>
           </div>
