@@ -16,14 +16,49 @@ export default function ContactForm() {
     message: "",
   });
 
+  const [error, setError] = useState("");
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    const payload = { ...form, plan };
-    console.log("Form submission:", payload);
-    await new Promise((r) => setTimeout(r, 1000));
-    setLoading(false);
-    setSubmitted(true);
+    setError("");
+
+    const planLabel =
+      plan === "basic" ? "Basic Plan (15%)"
+      : plan === "pro" ? "Pro Plan (20%)"
+      : plan === "unsure" ? "Not Sure Yet"
+      : "Not selected";
+
+    const payload = {
+      access_key: "7b4360e5-cf5c-4c48-9611-9eb251e1a7ac",
+      subject: "New AutoBNBs Property Enquiry",
+      from_name: form.name,
+      name: form.name,
+      email: form.email,
+      phone: form.phone || "Not provided",
+      property_address: form.address,
+      property_type: form.propertyType || "Not specified",
+      plan: planLabel,
+      message: form.message || "No message provided",
+    };
+
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify(payload),
+      });
+      const data = await res.json();
+      if (data.success) {
+        setSubmitted(true);
+      } else {
+        setError("Something went wrong. Please try again or email us directly.");
+      }
+    } catch {
+      setError("Something went wrong. Please try again or email us directly.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   const handleChange = (
@@ -39,11 +74,11 @@ export default function ContactForm() {
           <CheckCircle size={32} className="text-gray-600" />
         </div>
         <h3 className="font-display font-bold text-gray-900 text-2xl mb-3">
-          We&apos;ve Received Your Enquiry!
+          Enquiry Received!
         </h3>
         <p className="text-gray-500 text-base leading-relaxed max-w-sm">
-          Thanks for reaching out. We&apos;ll review your property details and get back to you
-          within one business day to schedule your free audit.
+          Thanks for getting in touch. Our team will review your property details and get
+          back to you within 24 hours.
         </p>
       </div>
     );
@@ -220,6 +255,10 @@ export default function ContactForm() {
           </p>
         )}
       </div>
+
+      {error && (
+        <p className="mb-4 text-sm text-red-500 text-center">{error}</p>
+      )}
 
       <button
         type="submit"
