@@ -13,7 +13,7 @@ interface FAQGroup {
   items: FAQItem[];
 }
 
-function AccordionItem({ item, id }: { item: FAQItem; id: string }) {
+function AccordionItem({ item }: { item: FAQItem }) {
   const [open, setOpen] = useState(false);
 
   return (
@@ -60,7 +60,6 @@ export default function FAQAccordion({ groups }: { groups: FAQGroup[] }) {
             {group.items.map((item, i) => (
               <AccordionItem
                 key={i}
-                id={`${group.category}-${i}`}
                 item={item}
               />
             ))}
