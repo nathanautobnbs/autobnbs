@@ -23,30 +23,19 @@ export default function ContactForm() {
     setLoading(true);
     setError("");
 
-    const planLabel =
-      plan === "basic" ? "Basic Plan (15%)"
-      : plan === "pro" ? "Pro Plan (20%)"
-      : plan === "unsure" ? "Not Sure Yet"
-      : "Not selected";
-
-    const payload = {
-      access_key: "7b4360e5-cf5c-4c48-9611-9eb251e1a7ac",
-      subject: "New AutoBNBs Property Enquiry",
-      from_name: form.name,
-      name: form.name,
-      email: form.email,
-      phone: form.phone || "Not provided",
-      property_address: form.address,
-      property_type: form.propertyType || "Not specified",
-      plan: planLabel,
-      message: form.message || "No message provided",
-    };
-
     try {
-      const res = await fetch("https://api.web3forms.com/submit", {
+      const res = await fetch("/api/contact", {
         method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify(payload),
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          phone: form.phone,
+          address: form.address,
+          propertyType: form.propertyType,
+          message: form.message,
+          plan,
+        }),
       });
       const data = await res.json();
       if (data.success) {
@@ -76,10 +65,19 @@ export default function ContactForm() {
         <h3 className="font-display font-bold text-gray-900 text-2xl mb-3">
           Enquiry Received!
         </h3>
-        <p className="text-gray-500 text-base leading-relaxed max-w-sm">
-          Thanks for getting in touch. Our team will review your property details and get
-          back to you within 24 hours.
+        <p className="text-gray-500 text-base leading-relaxed max-w-sm mb-5">
+          Thank you for reaching out! We&apos;ve received your enquiry and sent a confirmation
+          to your email. Check your inbox for next steps — including a link to book your
+          free 30-minute discovery call with our team.
         </p>
+        <a
+          href="https://calendly.com/wiari-autobnbs/30min"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 bg-gray-900 text-white font-display font-bold text-sm px-6 py-3 rounded-full shadow-md hover:bg-gray-800 hover:scale-105 transition-all duration-200"
+        >
+          Book Your Free 30-Min Call
+        </a>
       </div>
     );
   }
